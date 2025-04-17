@@ -25,7 +25,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  /* root will fill viewport width (flex container may shrink otherwise) */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -70,3 +70,8 @@ button:focus-visible {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure the React root element spans the full viewport width */
+#root {
+  width: 100vw;
+}
