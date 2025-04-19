@@ -6,14 +6,16 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 const RegisterPage = () => {
   // B2B fields
   const [companyName, setCompanyName] = useState("");
-  const [industry, setIndustry] = useState("");
   const [companyWebsite, setCompanyWebsite] = useState("");
-  const [jobTitle, setJobTitle] = useState("");
+
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+
+
+  
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -52,17 +54,6 @@ const RegisterPage = () => {
               />
             </div>
             <div>
-              <label htmlFor="industry" className="text-sm font-semibold text-gray-600">Industry</label>
-              <input
-                type="text"
-                id="industry"
-                value={industry}
-                onChange={(e) => setIndustry(e.target.value)}
-                placeholder="Industry (e.g., Technology)"
-                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
-              />
-            </div>
-            <div>
               <label htmlFor="companyWebsite" className="text-sm font-semibold text-gray-600">Company Website</label>
               <input
                 type="url"
@@ -70,17 +61,6 @@ const RegisterPage = () => {
                 value={companyWebsite}
                 onChange={(e) => setCompanyWebsite(e.target.value)}
                 placeholder="https://example.com"
-                className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="jobTitle" className="text-sm font-semibold text-gray-600">Job Title</label>
-              <input
-                type="text"
-                id="jobTitle"
-                value={jobTitle}
-                onChange={(e) => setJobTitle(e.target.value)}
-                placeholder="Your job title"
                 className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent"
               />
             </div>
