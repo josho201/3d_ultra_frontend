@@ -3,7 +3,6 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import Dashboard from "./pages/Dashboard";
 import NewProject from "./pages/NewProject";
-
 function App() {
   return (
     <Router>
