@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.829);
-  background-color: #0a1b39;/* #300a24;  dark purple background */
+  background-color:#0a1b39;/* #300a24;  dark purple background */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -74,11 +74,11 @@ button:focus-visible {
 
 /* Ensure the React root element spans the full viewport width */
 #root {
+  padding: 0%;
   width: 100vw;
 }
 
 
-#head{
-  color: red !important;
-  background-color:#0a1b39 ;
+header{
+  background-color:#0f1827 ;
 }

@@ -110,11 +110,12 @@ function NewProject() {
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       
-      <div className="flex space-x-8 w-8/12 bg-black/50 p-10 rounded-xl" >
-      
+      <div className="space-x-8 w-8/12 bg-black/50 p-10 rounded-xl" >
+       <div className='flex'>
+
         {/* Left side: inputs and actions */}
-        <div className="w-1/2  space-y-4">
-        <h1 className="text-3xl font-bold text-white mb-6">New Project</h1>
+        <div className="w-1/2  space-y-4 mr-5">
+        <h1 className="text-3xl font-bold text-white mb-6">New      <img src="src/assets/logo2.png" className='h-6 inline ml- mr-2 mb-1' alt="" />Project</h1>
           <div>
             <label className="block text-sm font-semibold text-gray-200 mb-1">
               Project ID
@@ -243,7 +244,13 @@ function NewProject() {
             </>
           )}
         </div>
+       </div>
+
+       <footer className='text-gray-500 border-t border-gray-800 pt-2 text-center mt-5'>
+        <span>In case of trouble or doubts, tell us at <a href="mailto:soporte@tinok.online"> soporte@tinok.online</a></span>
+       </footer>
       </div>
+      
     </div>
   );
 }

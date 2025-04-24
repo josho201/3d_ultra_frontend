@@ -11,9 +11,9 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen ">
       <Header />
-      <main>
+      <main className="p-6">
         <div className="mb-4">
           <button
             onClick={() => navigate('/newProject')}
@@ -22,7 +22,7 @@ const Dashboard = () => {
             Create Project +
           </button>
 
-      <img src="src/assets/logo.svg" alt="" className=''/>
+        <img src="src/assets/logo.svg" alt="" className='h-10'/>
         </div>
       </main>
     </div>
