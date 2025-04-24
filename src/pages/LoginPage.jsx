@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, googleProvider } from "../firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 
-const LoginPage = () => {
+const  LoginPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -33,7 +33,9 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center">
       <div className="bg-black bg-opacity-50 p-8 rounded-3xl shadow-xl w-full max-w-md">
-        <h1 className="text-3xl font-bold text-white text-center mb-6">Sign In</h1>
+        <h1 className="text-3xl font-bold text-white content-center mb-6">
+          <img src="src/assets/LOGO.png" className="mx-auto h-16" alt="" />
+        </h1>
         {error && <p className="text-red-400 text-center mb-4">{error}</p>}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

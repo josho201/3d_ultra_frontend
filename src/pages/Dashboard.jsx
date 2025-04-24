@@ -21,6 +21,8 @@ const Dashboard = () => {
           >
             Create Project +
           </button>
+
+      <img src="src/assets/logo.svg" alt="" className=''/>
         </div>
       </main>
     </div>

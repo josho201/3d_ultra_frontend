@@ -4,8 +4,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #300a24; /* dark purple background */
+  color: rgba(255, 255, 255, 0.829);
+  background-color: #0a1b39;/* #300a24;  dark purple background */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -54,6 +54,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -74,4 +75,10 @@ button:focus-visible {
 /* Ensure the React root element spans the full viewport width */
 #root {
   width: 100vw;
+}
+
+
+#head{
+  color: red !important;
+  background-color:#0a1b39 ;
 }
