@@ -1,6 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import Cropper from 'react-easy-crop';
+import { useNavigate } from 'react-router-dom';
 
+
+import { Header } from '../components/header';
 // Helper to create an HTMLImageElement from a URL
 const createImage = (url) =>
   new Promise((resolve, reject) => {
@@ -38,6 +41,7 @@ async function getCroppedImg(imageSrc, pixelCrop) {
 }
 
 function NewProject() {
+  const navigate = useNavigate();
   // Project metadata
   const [projectId, setProjectId] = useState('');
   const [projectName, setProjectName] = useState('');
@@ -108,17 +112,19 @@ function NewProject() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6">
-      
+    <>
+      <Header />
+    <div className="my-auto mt-20 flex items-center justify-center ">
+     
       <div className="space-x-8 w-8/12 bg-black/50 p-10 rounded-xl" >
        <div className='flex'>
 
         {/* Left side: inputs and actions */}
         <div className="w-1/2  space-y-4 mr-5">
-        <h1 className="text-3xl font-bold text-white mb-6">New      <img src="src/assets/logo2.png" className='h-6 inline ml- mr-2 mb-1' alt="" />Project</h1>
+        <h1 className="text-4xl font-bold text-white mb-6">Crea un nuevo proyecto</h1>
           <div>
             <label className="block text-sm font-semibold text-gray-200 mb-1">
-              Project ID
+              ID del Proyecto
             </label>
             <input
               type="text"
@@ -130,7 +136,7 @@ function NewProject() {
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-200 mb-1">
-              Project Name
+              Nombres del Proyecto
             </label>
             <input
               type="text"
@@ -142,7 +148,7 @@ function NewProject() {
           </div>
           <div>
             <label className="block text-sm font-semibold text-gray-200 mb-1">
-              Description
+              Descrición
             </label>
             <textarea
               rows={4}
@@ -157,14 +163,14 @@ function NewProject() {
               onClick={handleSave}
               className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             >
-              Save Project
+              Guardar Proyecto
             </button>
             {mode === 'review' && (
               <button
                 onClick={handleSaveAndProcess}
                 className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
               >
-                Save and Process
+                Guardar y Procesar
               </button>
             )}
           </div>
@@ -224,7 +230,7 @@ function NewProject() {
                 onClick={handleAccept}
                 className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
               >
-                Accept & Next
+                Aceptar y siguiente
               </button>
             </>
           )}
@@ -240,18 +246,26 @@ function NewProject() {
                   />
                 ))}
               </div>
-              <p className="text-gray-200">All images processed.</p>
+              <p className="text-gray-200">Todas las imagenes han sido preprocesadas.</p>
             </>
           )}
+          <button
+            className="mt-8 float-right px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+            onClick={() => navigate('/')}
+          >
+            Salir
+          </button>
         </div>
+    
        </div>
 
        <footer className='text-gray-500 border-t border-gray-800 pt-2 text-center mt-5'>
-        <span>In case of trouble or doubts, tell us at <a href="mailto:soporte@tinok.online"> soporte@tinok.online</a></span>
+        <span>En caso de dudas o problemas con la aplicacion, contactenos en <a className='soporte' href="mailto:soporte@tinok.online"> soporte@tinok.online</a></span>
        </footer>
       </div>
       
     </div>
+    </>
   );
 }
 

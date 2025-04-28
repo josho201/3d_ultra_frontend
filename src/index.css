@@ -82,3 +82,13 @@ button:focus-visible {
 header{
   background-color:#0f1827 ;
 }
+
+
+.soporte{
+  color: #535bf2 !important;
+}
+
+.soporte:hover{
+  color: #2c36f7 !important;
+  text-decoration: underline !important;
+}
